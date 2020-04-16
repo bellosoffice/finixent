@@ -24,3 +24,9 @@
         width: 20%;
         background-color: #8ebf42;
     }
+
+    .brandedTitle{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
