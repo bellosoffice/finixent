@@ -8,21 +8,71 @@
     <meta name="author" content="Mustapha Bello">
     <link rel="stylesheet" href="css/styles.css">
     <title>Studio</title>
+
+
+    <script>
+        function bookSession() {
+            alert("The session was successfully booked. \nSee you soon");
+            document.getElementById("bookme").innerHTML = "Booked";
+            document.getElementById("bookme").className = "button buttonBooked"
+        }
+        function booked() {
+            alert("This session is not avaialable. \nTry picking another date");
+        }
+    </script>
+
+    <!-- bootstrap scripts -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
+    <div class="top-container">
+      <div class="navbar">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Finix</a> <br>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="AboutUs.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ContactUS.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="csr.html">Csr</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.html">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Merchandise.html">Merchandise</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="studio.html">Studio</a>
+              </li>
+          </div>
+        </nav>
+      </div>
     <!-- start header section -->
-    <img src="./images/logo.jpg" height="100" width="300" class="brandedTitle">
-    <span class="brandedTitle">
-        <b>
-            <br>
-            Finix Entertainment
-        </b>
-    </span>
-    <p>Give it your all</p>
+    <div class="brandedTitle">
+     <img src="./images/logo.jpg" height="100" width="300" class="logo">
+     <p><span>Finix Entertainment</span><br>Give it your all</p>
+     </div>
+
 
     <!-- end header section -->
-
+</div>
     <!-- start content section -->
     <div class="content">
         <div class="green">
@@ -48,9 +98,29 @@
             <p>Studio</p>
             <img src="./images/studio.jpg" height="100" width="300" class="brandedTitle">
             <p>Pick A Session below</p>
+
             <table>
-                <tr><td>Monday 27th April</td><td>Fully Booked</td></tr>
-                <tr><td>Tuesday 28th April</td><td>Available</td><button>Book Now</button></tr>
+                <colgroup>
+                    <col span="1" style="width: 65%;">
+                    <col span="1" style="width: 35%;">
+                </colgroup>
+
+
+
+                <!-- Put <thead>, <tbody>, and <tr>'s here! -->
+                <tbody>
+                    <tr>
+                        <td style="background-color: rgb(243, 255, 228)">Monday 27th April</td>
+                        <td style="background-color: rgb(125, 165, 218)"><button class="button buttonBooked"
+                                onclick="booked()">Booked</button></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: rgb(243, 255, 228)">Tuesday 28th April</td>
+                        <td style="background-color: rgb(125, 165, 218)"><button id="bookme" class="button buttonAvailable"
+                                onclick="bookSession()">Book
+                                Now</button></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
@@ -60,11 +130,18 @@
     <!-- end content section -->
 
     <!-- start footer section -->
-    <p> Location ~ Address </p>
+    <div class="bottom-container">
 
-    <p>
-        Facebook | Instagram | Twitter | Youtube
-    </p>
+
+    <div class="col-lg-12">
+      <p> Location ~ Address</p><br>
+      <a href="#" class="mail">MAIL</a>
+      <p>
+        <a href="https://www.facebook.com/TKrossMusic/" target="_blank" rel="noopener noreferrer">Facebook</a> | <a href="https://www.instagram.com/iamtkross/?igshid=38kbzeoxhx18" target="_blank" rel="noopener noreferrer">Instagram</a> | <a
+          href="https://mobile.twitter.com/iamtkross" target="_blank" rel="noopener noreferrer">Twitter</a> | <a href="https://www.youtube.com/channel/UCgk6AcySVjvVAhCMTxUHXFw" target="_blank" rel="noopener noreferrer">Youtube</a>
+      </p>
+    </div>
+    </div>
 
     <!-- end footer section -->
 </body>
